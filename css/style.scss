@@ -1,0 +1,73 @@
+﻿@import url(//fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&family=Press+Start+2P&display=swap);
+@supports (-webkit-touch-callout: none) {
+    #bg-video {
+        height: -webkit-fill-available;
+    }
+    #frame {
+        height: -webkit-fill-available;
+    }
+    #count-down-wrapper {
+        height: -webkit-fill-available;
+        overflow: hidden;
+    }
+}
+body {
+    background-color: #FEE039;
+}
+#count-down-timer {
+    font-family: 'Press Start 2P',
+    'DotGothic16',
+    cursive;
+    color: white;
+    filter:
+    drop-shadow(0px 0px 2.2px rgba(0, 0, 0, 0.042))
+    drop-shadow(0px 0px 5.3px rgba(0, 0, 0, 0.061))
+    drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.075))
+    drop-shadow(0px 0px 17.9px rgba(0, 0, 0, 0.089))
+    drop-shadow(0px 0px 33.4px rgba(0, 0, 0, 0.108))
+    drop-shadow(0px 0px 80px rgba(0, 0, 0, 0.15));
+
+    span {
+        vertical-align: 25%;
+    }
+}
+#page-title-wrapper {
+    width: 100vw;
+    height: 50px;
+    @media (orientation: portrait) {
+        height: 30px;
+    }
+    top: 0px;
+    position: fixed;
+    display: grid;
+    place-content: center;
+    #page-title {
+        font-family: 'Hachi Maru Pop',
+        cursive;
+    }
+}
+#copy-wright-wrapper {
+    width: 100vw;
+    height: 50px;
+    @media (orientation: portrait) {
+        height: 30px;
+    }
+    bottom: 0px;
+    position: fixed;
+    display: grid;
+    place-content: center;
+    #copy-right {
+        font-family: 'Hachi Maru Pop',
+        cursive;
+    }
+}
+#bg-video {
+    filter: blur(5px);
+    z-index: -100;
+}
+#frame {
+    border: solid 50px #FEE039;
+    @media (orientation: portrait) {
+        border: solid 30px #FEE039;
+    }
+}

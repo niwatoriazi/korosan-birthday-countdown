@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- カラーテーマ -->
+    <meta name="theme-color" content="#FEE039" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#FEE039" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- ogp系 -->
+    <meta name="description" content="ホロライブ所属、ころさん(戌神ころね)の非公式誕生日カウンターです。">
+    <meta property="og:title" content="ころさんお誕生日カウントダウン(非公式)">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="ホロライブ所属、ころさん(戌神ころね)の非公式誕生日カウンターです。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="ころさんお誕生日カウントダウン(非公式)">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@niwatoriazi">
+    <!-- アイコン -->
+    <link rel="icon" href="./media/icon.svg" type="image/svg+xml">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <title>ころさんお誕生日カウントダウン(非公式)</title>
+</head>
+
+<body class="select-none">
+    <div id="bg-video" class="w-screen h-screen fixed">
+        <video class="w-full h-full object-cover" src="./media/korosan-birthday-countdown-back-video.webm" autoplay muted
+            playsinline loop></video>
+    </div>
+    <div id="count-down-wrapper" class="w-screen h-screen grid place-items-center">
+        <h1 id="count-down-timer" class="lg:text-9xl text-6xl lg:text-center md:text-left leading-tight lg:leading-snug whitespace-normal
+            whitespace-no-wrap">
+            <span class="lg:text-7xl text-3xl">誕生日まであと</span><br>{{getDay}}<span
+                class="lg:text-7xl text-3xl">日</span><br class="
+                lg:hidden">{{getHour}}<span class="lg:text-7xl text-3xl">時間</span><br>{{getMinute}}<span
+                class="lg:text-7xl text-3xl">分</span><br class="lg:hidden">{{getSecond}}<span
+                class="lg:text-7xl text-3xl">秒</span>
+        </h1>
+    </div>
+    <div id="page-title-wrapper" class="display-width z-50">
+        <p id="page-title" class="text-sm lg:text-base text-center text-white">
+            ころさんお誕生日カウントダウン(非公式)
+        </p>
+    </div>
+    <div id="copy-wright-wrapper" class="display-width z-50">
+        <a href="https://twitter.com/niwatoriazi" target="_blank" id="copy-right"
+            class="text-xs lg:text-base text-center underline text-white">©2021 にわとりあじ</a>
+    </div>
+    <div id="frame" class="fixed inset-0 w-screen h-screen"></div>
+    <a href="" target="_blank"
+        class="fixed right-10 bottom-24 lg:right-20 lg:bottom-48 transform hover:-rotate-6 hover:scale-110
+        duration-200">
+        <img class="w-16 lg:w-24 z-50" src="./media/2021Twitter logo-blue.png" alt="twitter-logo">
+    </a>
+    <a href="https://youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q" target="_blank"
+        class="fixed right-10 bottom-10 lg:right-20 lg:bottom-20 transform hover:-rotate-6 hover:scale-110
+        duration-200">
+        <img class="w-16 lg:w-24 z-50" src="./media/youtube_social_icon_red.webp" alt="youtube-logo">
+    </a>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
