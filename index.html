@@ -30,11 +30,12 @@
 </head>
 
 <body class="select-none">
+    <div id="party" class="fixed w-screen h-screen"></div>
     <div id="bg-video" class="w-screen h-screen fixed">
         <video class="w-full h-full object-cover" src="./media/korosan-birthday-countdown-back-video.mp4" autoplay muted
             playsinline loop></video>
     </div>
-    <div id="count-down-wrapper" class="w-screen h-screen grid place-items-center">
+    <div id="count-down-wrapper" class="w-screen h-screen grid place-items-center pointer-events-none fixed">
         <h1 id="count-down-timer" class="lg:text-9xl text-6xl lg:text-center md:text-left leading-tight lg:leading-snug whitespace-normal
             whitespace-no-wrap">
             <span class="lg:text-7xl text-3xl">誕生日まであと</span><br>{{getDay}}<span
@@ -44,28 +45,47 @@
                 class="lg:text-7xl text-3xl">秒</span>
         </h1>
     </div>
-    <div id="page-title-wrapper" class="display-width z-50">
+    <div id="page-title-wrapper" class="display-width">
         <p id="page-title" class="text-sm lg:text-base text-center text-white">
             ころさんお誕生日カウントダウン(非公式)
         </p>
     </div>
-    <div id="copy-wright-wrapper" class="display-width z-50">
+    <div id="copy-wright-wrapper" class="display-width">
         <a href="https://twitter.com/niwatoriazi" target="_blank" id="copy-right"
             class="text-xs lg:text-base text-center underline text-white">©2021 にわとりあじ</a>
     </div>
-    <div id="frame" class="fixed inset-0 w-screen h-screen"></div>
-    <a href="https://twitter.com/share?url=https%3A%2F%2Fniwatoriazi.github.io%2Fkorosan-birthday-countdown%2F"
-        target="_blank"
-        class="fixed right-10 bottom-24 lg:right-20 lg:bottom-48 transform hover:-rotate-6 hover:scale-110
+    <div id="frame" class="fixed inset-0 w-screen h-screen pointer-events-none"></div>
+    <a href="https://twitter.com/share?url=https%3A%2F%2Fniwatoriazi.github.io%2Fkorosan-birthday-countdown%2F" id="twitter-share-link"
+        target="_blank" class="fixed right-10 bottom-24 lg:right-20 lg:bottom-48 transform hover:-rotate-6 hover:scale-110
         duration-200">
-        <img class="w-16 lg:w-24 z-50" src="./media/2021Twitter logo-blue.png" alt="twitter-logo">
+        <img class="w-16 lg:w-24" src="./media/2021Twitter logo-blue.png" alt="twitter-logo">
     </a>
-    <a href="https://youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q" target="_blank"
-        class="fixed right-10 bottom-10 lg:right-20 lg:bottom-20 transform hover:-rotate-6 hover:scale-110
+    <a href="https://youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q" id="youtube-channel-link" target="_blank" class="fixed right-10 bottom-10 lg:right-20 lg:bottom-20 transform hover:-rotate-6 hover:scale-110
         duration-200">
-        <img class="w-16 lg:w-24 z-50" src="./media/youtube_social_icon_red.webp" alt="youtube-logo">
+        <img class="w-16 lg:w-24" src="./media/youtube_social_icon_red.webp" alt="youtube-logo">
     </a>
+    
+    <!-- js -->
     <script src="https://unpkg.com/vue@3.2.19/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script>
+        document.querySelector("#party").addEventListener("click", function (e) {
+            party.confetti(new party.Rect(event.clientX, event.clientY), {
+                count: party.variation.range(20, 40),
+            });
+        });
+    </script>
+    <script src="https://bennettfeely.com/ztext/js/ztext.min.js"></script>
+    <script>
+        var ztxt = new Ztextify("#count-down-timer", {
+        depth: "30px",
+        layers: 8,
+        direction: "forwards",
+        event: "pointer",
+        eventRotation: "90deg",
+        color: "#0bd"
+        });
+    </script>
     <script src="./js/main.js"></script>
 </body>
 
