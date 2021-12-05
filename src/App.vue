@@ -7,6 +7,7 @@ import CountDownWrapper from './components/CountDownWrapper.vue';
     <video
       class="w-full h-full object-cover"
       src="./assets/korosan-birthday-countdown-back-video.mp4"
+      poster="./assets/korosan-birthday-countdown-back-video_poster.webp"
       autoplay
       muted
       playsinline
