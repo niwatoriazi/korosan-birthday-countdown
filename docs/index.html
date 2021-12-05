@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- カラーテーマ -->
+  <meta name="theme-color" content="#FEE039" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#FEE039" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- ogp系 -->
+  <meta name="description" content="ホロライブ所属、ころさん(戌神ころね)の非公式誕生日カウンターです。">
+  <meta property="og:title" content="ころさんお誕生日カウントダウン(非公式)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://niwatoriazi.github.io/korosan-birthday-countdown/">
+  <meta property="og:image" content="https://niwatoriazi.github.io/korosan-birthday-countdown/media/ogp.jpg">
+  <meta property="og:description" content="ホロライブ所属、ころさん(戌神ころね)の非公式誕生日カウンターです。">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="ころさんお誕生日カウントダウン(非公式)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@niwatoriazi">
+  <!-- アイコン -->
+  <link rel="icon" href="./media/icon.svg" type="image/svg+xml">
+  <title>ころさんお誕生日カウントダウン(非公式)</title>
+  <script type="module" crossorigin src="/assets/index.ac5d6d9e.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.49d2612d.js">
+  <link rel="stylesheet" href="/assets/index.645cb668.css">
+</head>
+
+<body>
+  <div id="party" class="fixed w-screen h-screen"></div>
+  <div id="app"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  <script>
+    document.querySelector("#party").addEventListener("click", function (e) {
+      party.confetti(new party.Rect(event.clientX, event.clientY), {
+        count: party.variation.range(20, 40),
+      });
+    });
+  </script>
+</body>
+
+</html>

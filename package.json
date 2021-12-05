@@ -1,0 +1,20 @@
+{
+  "name": "korosan-birthday-countdown-v2",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "sass": "^1.44.0",
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4",
+    "vite-plugin-windicss": "^1.5.4",
+    "windicss": "^3.2.1"
+  }
+}
