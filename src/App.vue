@@ -31,7 +31,7 @@ import CountDownWrapper from './components/CountDownWrapper.vue';
     id="okayun-counter-link"
     class="fixed right-10 bottom-38 lg:right-20 lg:bottom-76 transform hover:-rotate-6 hover:scale-110 duration-200"
   >
-    <img src="./assets/1f359.svg" class="w-24" />
+    <img src="./assets/1f359.svg" class="w-16 lg:w-24" />
   </a>
   <a
     href="https://twitter.com/inugamikorone"
